@@ -38,7 +38,11 @@ def generate_dictionary(task_name, task_description):
             }
           ]
         }
-      ]
+      ],
+      "generationConfig": {
+        "maxOutputTokens": 1500,
+        "temperature": 0.3
+      },
     }
 
     response = requests.post(gemini_api_url, headers=headers, json=data)
